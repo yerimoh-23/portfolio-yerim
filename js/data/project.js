@@ -46,8 +46,8 @@ const projects = [
     title: "Mental Health Screening Web",
     tags: ["HTML", "CSS", "JavaScript", "Hackathon"],
     year: 2023,
-    description_en: "Designed and developed a responsive web application within 24 hours to conduct depression and anxiety screening assessments and generate personalized recommendations. Awarded Best Remote Health Hack at HackHolyoke 2022 (9 of 16 teams submitted)",
-    description_ko: "24시간 내 우울·불안 스크리닝 평가 및 맞춤형 추천을 제공하는 반응형 웹앱 설계·개발. HackHolyoke 2022 Best Remote Health Hack 수상 (16팀 참가, 제출 9팀 중).",
+    description_en: "Designed and developed a responsive web application within 24 hours to conduct depression and anxiety screening assessments and generate personalized recommendations. Awarded Best Remote Health Hack at HackHolyoke 2022.",
+    description_ko: "24시간 내 우울·불안 스크리닝 평가 및 맞춤형 추천을 제공하는 반응형 웹앱 설계·개발. HackHolyoke 2022 Best Remote Health Hack 수상.",
   },
   {
     category: "game",
