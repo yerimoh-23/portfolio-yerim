@@ -35,7 +35,7 @@ const projects = [
     image: "./image/FractalModel.png",
     title: "Models of Fractal Growth",
     tags: ["NetLogo", "R", "Simulation Modeling", "Computational Experiments", "Research"],
-    year: 2024-2025,
+    year: 2025,
     description_en: "Research project: simulation-based modeling framework to analyze pattern formation and growth dynamics in polymer thin films. Implemented a modified Triangular Growth Model (TGM) in NetLogo; designed parameter-driven experiments and evaluated output using quantitative metrics. Presented at MHC Senior Symposium (Apr 2025).",
     description_ko: "연구 프로젝트: 폴리머 박막의 패턴 형성 및 성장 역학 분석을 위한 시뮬레이션 기반 모델링 프레임워크. NetLogo에서 수정된 삼각 성장 모델(TGM) 구현; 파라미터 기반 실험 설계 및 정량적 지표로 출력 평가. MHC Senior Symposium 발표 (2025.04).",
   },

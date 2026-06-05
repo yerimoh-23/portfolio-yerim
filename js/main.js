@@ -58,6 +58,7 @@ function initTiltEffect() {
 function renderProjects() {
   const projectGrid = document.getElementById("project-grid");
   if (!projectGrid) return; // projects.html이 아니면 스킵
+  const isKo = document.body.classList.contains("ko");
 
   projectGrid.innerHTML = projects.map((p) => `
     <a href="${p.link}" target="_blank" rel="noopener"
@@ -78,7 +79,7 @@ function renderProjects() {
         <div class="project-card-tags">
           ${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}
         </div>
-        <p class="project-card-desc">${p.description}</p>
+        <p class="project-card-desc">${isKo ? p.description_ko : p.description_en}</p>
         <span class="project-card-year">${p.year}</span>
       </div>
     </a>
@@ -105,6 +106,7 @@ function applyLang(lang, save = true) {
     document.body.classList.remove("ko");
     if (btn) btn.textContent = "한국어";
   }
+  renderProjects();
 }
 
 function toggleLang() {
