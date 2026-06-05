@@ -798,7 +798,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid rgba(42, 80, 140, 0.08);
 }
 
-.project-card-desc {font-size: var(--fs-small); color: var(--text2); line-height: 1.6;}
+.project-card-desc {font-size: var(--fs-small); font-weight: 400; color: var(--text2); line-height: 1.6;}
 .project-card-year {font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--text3); margin-top: 8px;
 }
 
