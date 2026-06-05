@@ -290,9 +290,9 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(
     135deg,
     transparent 0%,
-    rgba(100, 170, 50, 0.04) 25%,
-    rgba(200, 190, 40, 0.05) 50%,
-    rgba(140, 190, 60, 0.04) 75%,
+    rgba(50, 104, 170, 0.04) 25%,
+    rgba(40, 200, 189, 0.05) 50%,
+    rgba(60, 142, 190, 0.04) 75%,
     transparent 100%
   );
   opacity: 0;
@@ -492,8 +492,8 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(
     135deg,
     var(--text) 0%,
-    #334e8c 40%,
-    #5979b0 60%,
+    #3c5c9c 40%,
+    #628cab 60%,
     var(--text) 100%
   );
   background-size: 300% auto;
@@ -800,13 +800,6 @@ img { display: block; max-width: 100%; }
 
 .project-card-desc {font-size: var(--fs-small); color: var(--text2); line-height: 1.6;}
 .project-card-year {font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--text3); margin-top: 8px;
-}
-
-/* Prevent description, tag and skill text from appearing bold when hovering the project card */
-.project-card:hover .project-card-desc,
-.project-card:hover .project-card-tags .tag,
-.project-card:hover .skill-pill {
-  font-weight: 400 !important;
 }
 
 @keyframes fadeScale {
