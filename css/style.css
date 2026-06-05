@@ -23,9 +23,9 @@
   --accent-light: rgba(42, 75, 140, 0.143);
   --accent-glow: rgba(42, 76, 140, 0.25);
 
-  --holo-1: rgba(50, 90, 170, 0.5);
-  --holo-2: rgba(69, 144, 185, 0.5);
-  --holo-3: rgba(60, 121, 190, 0.45);
+  --holo-1: rgba(69, 102, 169, 0.5);
+  --holo-2: rgba(87, 162, 202, 0.5);
+  --holo-3: rgba(83, 138, 200, 0.45);
 
   --tag-award-bg: #e8d2d3; --tag-award: #702e30;
   --tag-work-bg:  #ebe2cc; --tag-work:  #be8918;
@@ -187,7 +187,7 @@ img { display: block; max-width: 100%; }
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(circle, rgba(50, 105, 160, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(69, 115, 161, 0.04) 0%, transparent 70%);
   transform: translate(-50%, -50%);
   transition: opacity 0.3s;
   will-change: left, top;
@@ -492,8 +492,8 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(
     135deg,
     var(--text) 0%,
-    #223a70 40%,
-    #3e64a4 60%,
+    #334e8c 40%,
+    #5979b0 60%,
     var(--text) 100%
   );
   background-size: 300% auto;
