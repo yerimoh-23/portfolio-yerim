@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yerim Oh</title>
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Ambient background orbs -->
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-orb"></div>
+      <div class="ambient-orb"></div>
+      <div class="ambient-orb"></div>
+    </div>
+    <!-- Noise texture -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="site-wrapper">
+
+      <!-- ======================== ABOUT ======================== -->
+      <section id="about" class="section active">
+        <div class="container">
+          <div class="about-hero">
+
+            <h1 class="about-greeting stagger-in">
+              <span>Hi, I'm Yerim</span>
+            </h1>
+
+            <div class="about-bio stagger-in">
+              <p data-en>
+                Statistics & Computer Science graduate from Mount Holyoke College,
+                passionate about turning data into clear, actionable insights.
+              </p>
+              <p data-ko>
+                통계학 전공, 컴퓨터 사이언스 부전공으로 Mount Holyoke College를 졸업했습니다.
+                데이터를 명확하고 실질적인 인사이트로 전환하는 것에 관심이 많습니다.
+              </p>
+              <p data-en>
+                I work across the full analytical cycle — from exploratory analysis
+                and statistical modeling to communicating findings to diverse stakeholders.
+              </p>
+              <p data-ko>
+                탐색적 분석부터 통계 모델링, 다양한 이해관계자와의 소통까지
+                데이터 분석의 전 과정을 경험했습니다.
+              </p>
+            </div>
+
+            <div class="about-meta stagger-in">
+              <div class="meta-item">
+                <div class="meta-label" data-en>Based in</div>
+                <div class="meta-label" data-ko>위치</div>
+                <div class="meta-val">South Korea</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label" data-en>Degree</div>
+                <div class="meta-label" data-ko>학위</div>
+                <div class="meta-val" data-en>B.A. Statistics, Minor CS </div>
+                <div class="meta-val" data-ko>통계학 학사, CS 부전공</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label" data-en>Focus</div>
+                <div class="meta-label" data-ko>관심 분야</div>
+                <div class="meta-val" data-en>Data Analysis · Statistical Modeling</div>
+                <div class="meta-val" data-ko>데이터 분석 · 통계 모델링</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">GitHub</div>
+                <div class="meta-val">
+                  <a href="https://github.com/yerimoh-23" target="_blank" style="color:inherit">yerimoh-23</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /site-wrapper -->
+
+    <!-- ======================== BOTTOM NAV ======================== -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <div class="nav-bar">
+        <div class="nav-indicator"></div>
+        <a href="index.html" class="nav-btn active">
+          <span data-en>About</span><span data-ko>소개</span>
+        </a>
+        <a href="experience.html" class="nav-btn">
+          <span data-en>Experience</span><span data-ko>경험</span>
+        </a>
+        <a href="projects.html" class="nav-btn">
+          <span data-en>Projects</span><span data-ko>프로젝트</span>
+        </a>
+        <a href="skills.html" class="nav-btn">
+          <span data-en>Skills</span><span data-ko>스킬</span>
+        </a>
+        <a href="contact.html" class="nav-btn">
+          <span data-en>Contact</span><span data-ko>연락처</span>
+        </a>
+        <button class="lang-toggle" id="lang-toggle">한국어</button>
+      </div>
+    </nav>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

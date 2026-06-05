@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience — Yerim Oh</title>
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-orb"></div>
+      <div class="ambient-orb"></div>
+      <div class="ambient-orb"></div>
+    </div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="site-wrapper">
+      <section id="experience" class="section active">
+        <div class="container">
+
+          <p class="section-label">Background</p>
+          <h2 class="section-title">Experience</h2>
+
+          <!-- 탭 버튼 -->
+          <div class="tabs" style="margin-top:1.5rem;">
+            <button class="tab-btn active" data-target="timeline">
+              <span>Timeline</span>
+            </button>
+            <button class="tab-btn" data-target="category">
+              <span>By Category</span>
+            </button>
+          </div>
+
+          <!-- ══════ TIMELINE VIEW ══════ -->
+          <div id="timeline" class="tl-view active">
+            <!-- render.js → renderTimeline()이 채워줌 -->
+          </div>
+
+          <!-- ══════ CATEGORY VIEW ══════ -->
+          <div id="category" class="tl-view">
+            <div class="experience-group">
+              <h3 class="experience-group-title" data-en>Work & Research</h3>
+              <h3 class="experience-group-title" data-ko>경력 & 연구</h3>
+              <div id="work-timeline" class="cat-list"></div>
+            </div>
+            <div class="experience-group">
+              <h3 class="experience-group-title" data-en>Activities & Leadership</h3>
+              <h3 class="experience-group-title" data-ko>활동 & 리더십</h3>
+              <div id="activities-timeline" class="cat-list"></div>
+            </div>
+            <div class="experience-group">
+              <h3 class="experience-group-title" data-en>Awards</h3>
+              <h3 class="experience-group-title" data-ko>수상</h3>
+              <div id="awards-timeline" class="cat-list"></div>
+            </div>
+            <div class="experience-group">
+              <h3 class="experience-group-title" data-en>Education</h3>
+              <h3 class="experience-group-title" data-ko>학력</h3>
+              <div id="edu-timeline" class="cat-list"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+<!-- ======================== BOTTOM NAV ======================== -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <div class="nav-bar">
+        <div class="nav-indicator"></div>
+        <a href="index.html" class="nav-btn active">
+          <span data-en>About</span><span data-ko>소개</span>
+        </a>
+        <a href="experience.html" class="nav-btn">
+          <span data-en>Experience</span><span data-ko>경험</span>
+        </a>
+        <a href="projects.html" class="nav-btn">
+          <span data-en>Projects</span><span data-ko>프로젝트</span>
+        </a>
+        <a href="skills.html" class="nav-btn">
+          <span data-en>Skills</span><span data-ko>스킬</span>
+        </a>
+        <a href="contact.html" class="nav-btn">
+          <span data-en>Contact</span><span data-ko>연락처</span>
+        </a>
+        <button class="lang-toggle" id="lang-toggle">한국어</button>
+      </div>
+    </nav>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module">
+      import { initExperience } from "./js/render.js";
+      document.addEventListener("DOMContentLoaded", initExperience);
+    </script>
+  </body>
+</html>
