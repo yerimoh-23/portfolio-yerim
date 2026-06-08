@@ -58,7 +58,7 @@ function initTiltEffect() {
 // ══════════════════════════════════════════
 function renderProjects() {
   const projectGrid = document.getElementById("project-grid");
-  if (!projectGrid) return; // projects.html이 아니면 스킵
+  if (!projectGrid) return;
   const isKo = document.body.classList.contains("ko");
 
   projectGrid.innerHTML = projects.map((p) => `
@@ -87,6 +87,9 @@ function renderProjects() {
   `).join("");
 }
 
+// ══════════════════════════════════════════
+// SKILLS (skills.html에서만 실행)
+// ══════════════════════════════════════════
 function renderSkills() {
   const skillList = document.getElementById("skill-list");
   if (!skillList) return;

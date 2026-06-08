@@ -1,5 +1,4 @@
 import experience from "./data/experience.js";
-import { registerExperienceRerender } from "./main.js";
 
 // ── 카테고리 태그 HTML 생성 ──
 function categoryTag(category) {
@@ -140,9 +139,15 @@ export function initExperience() {
   renderCategory();
   initTabs();
 
-  // 언어 전환 시 재렌더링을 main.js에 등록
-  registerExperienceRerender(() => {
-    renderTimeline();
-    renderCategory();
-  });
+  // main.js의 언어 토글 버튼에 직접 리스너 추가
+  const langBtn = document.getElementById("lang-toggle");
+  if (langBtn) {
+    langBtn.addEventListener("click", () => {
+      // body.ko 클래스 변경 후 실행되도록 약간 지연
+      setTimeout(() => {
+        renderTimeline();
+        renderCategory();
+      }, 50);
+    });
+  }
 }
