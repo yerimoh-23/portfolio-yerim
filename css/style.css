@@ -6,7 +6,7 @@
 
 :root {
   --bg: #f7f7f7;
-  --bg2: #ecedf3;
+  --bg2: rgb(237, 237, 240);
   --border: #d9d9d9;
   --border2: #d7d3d3;
   --glass-bg: rgba(255, 255, 255, 0.5);
@@ -27,10 +27,10 @@
   --holo-2: rgba(87, 162, 202, 0.5);
   --holo-3: rgba(83, 138, 200, 0.45);
 
-  --tag-award-bg: #e8d2d3; --tag-award: #702e30;
-  --tag-work-bg:  #ebe2cc; --tag-work:  #be8918;
-  --tag-act-bg:   #d4ddec; --tag-act:   #4e6440;
-  --tag-proj-bg:  #d2cee8; --tag-proj:  #3a2a8a;
+  --tag-award-bg: #efd7d8; --tag-award: #702e30;
+  --tag-work-bg:  #f2e9d3; --tag-work:  #be8918;
+  --tag-act-bg:   #d8e2ce; --tag-act:   #4e6440;
+  --tag-proj-bg:  #dbd7f0; --tag-proj:  #3a2a8a;
 
   --font-serif: "Playfair Display", "Georgia", serif;
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
