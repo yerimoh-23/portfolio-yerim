@@ -30,10 +30,10 @@
           <!-- 탭 버튼 -->
           <div class="tabs" style="margin-top:1.5rem;">
             <button class="tab-btn active" data-target="timeline">
-              <span>Timeline</span>
+              <span data-en>Timeline</span><span data-ko>타임라인</span>
             </button>
             <button class="tab-btn" data-target="category">
-              <span>By Category</span>
+              <span data-en>By Category</span><span data-ko>카테고리별</span>
             </button>
           </div>
 
@@ -70,11 +70,11 @@
       </section>
     </div>
 
-<!-- ======================== BOTTOM NAV ======================== -->
+    <!-- ======================== BOTTOM NAV ======================== -->
     <nav class="bottom-nav" aria-label="Main navigation">
       <div class="nav-bar">
         <div class="nav-indicator"></div>
-        <a href="index.html" class="nav-btn active">
+        <a href="index.html" class="nav-btn">
           <span data-en>About</span><span data-ko>소개</span>
         </a>
         <a href="experience.html" class="nav-btn">
@@ -93,10 +93,13 @@
       </div>
     </nav>
 
+    <!-- main.js 먼저 (언어 토글 등 공통 기능) -->
     <script type="module" src="./js/main.js"></script>
+    <!-- render.js: experience 페이지 전용 렌더러 -->
     <script type="module">
       import { initExperience } from "./js/render.js";
       document.addEventListener("DOMContentLoaded", initExperience);
     </script>
+
   </body>
 </html>
