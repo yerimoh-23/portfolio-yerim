@@ -1,4 +1,5 @@
 import projects from "./data/project.js";
+import skills from "./data/skill.js";
 
 // ══════════════════════════════════════════
 // CURSOR GLOW
@@ -86,6 +87,27 @@ function renderProjects() {
   `).join("");
 }
 
+function renderSkills() {
+  const skillList = document.getElementById("skill-list");
+  if (!skillList) return;
+
+  skillList.innerHTML = skills.map((group) => `
+    <div class="skill-group stagger-in">
+      <div class="skill-group-title" data-en>${group.title_en}</div>
+      <div class="skill-group-title" data-ko>${group.title_ko}</div>
+      <div class="skill-pills">
+        ${group.items
+          .map((item) =>
+            typeof item === "string"
+              ? `<span class="skill-pill">${item}</span>`
+              : `<span class="skill-pill"><span data-en>${item.en}</span><span data-ko>${item.ko}</span></span>`
+          )
+          .join("")}
+      </div>
+    </div>
+  `).join("");
+}
+
 // ══════════════════════════════════════════
 // LANGUAGE TOGGLE
 // ══════════════════════════════════════════
@@ -138,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLang();
   initNav();
   renderProjects();
+  renderSkills();
   triggerStagger();
   initTiltEffect();
 });
