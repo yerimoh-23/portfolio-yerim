@@ -1,12 +1,13 @@
-import experience from "./experience.js";
+import experience from "./data/experience.js";
+import { registerExperienceRerender } from "./main.js";
 
 // ── 카테고리 태그 HTML 생성 ──
 function categoryTag(category) {
   const map = {
-    work:      { cls: "tag-work",  en: "Work",     ko: "경력" },
-    activity:  { cls: "tag-act",   en: "Activity", ko: "활동" },
-    award:     { cls: "tag-award", en: "Award",    ko: "수상" },
-    education: { cls: "tag-edu",   en: "Edu",      ko: "학력" },
+    work:      { cls: "tag-work",  en: "Work",      ko: "경력" },
+    activity:  { cls: "tag-act",   en: "Activity",  ko: "활동" },
+    award:     { cls: "tag-award", en: "Award",     ko: "수상" },
+    education: { cls: "tag-edu",   en: "Education", ko: "학력" },
   };
   const t = map[category] || { cls: "tag-edu", en: category, ko: category };
   return `<span class="tag ${t.cls} tl-tag">
@@ -56,12 +57,10 @@ function renderTimeline() {
             <div class="tl-body">
               <div class="tl-title">
                 ${item.companyUrl
-                  ? `<a href="${item.companyUrl}" target="_blank" style="color:inherit;text-decoration:none;">${item.company}</a>`
+                  ? `<a href="${item.companyUrl}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${item.company}</a>`
                   : item.company
                 }
-                —
-                <span data-en>${item.role_en || ""}</span>
-                <span data-ko>${item.role_ko || ""}</span>
+                ${item.role_en ? `— <span data-en>${item.role_en}</span><span data-ko>${item.role_ko || item.role_en}</span>` : ""}
                 <span class="badge">
                   <span data-en>${item.date_en}</span>
                   <span data-ko>${item.date_ko}</span>
@@ -92,11 +91,12 @@ function renderCategoryGroup(containerId, items) {
       </div>
       <div class="cat-name">
         ${item.companyUrl
-          ? `<a href="${item.companyUrl}" target="_blank" style="color:inherit;text-decoration:none;">${item.company}</a>`
+          ? `<a href="${item.companyUrl}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${item.company}</a>`
           : item.company
         }
-        ${item.role_en ? `— <span data-en>${item.role_en}</span>` : ""}
-        ${item.role_ko ? `<span data-ko>${item.role_ko}</span>` : ""}
+        ${item.role_en
+          ? `— <span data-en>${item.role_en}</span><span data-ko>${item.role_ko || item.role_en}</span>`
+          : ""}
       </div>
       <div class="cat-sub">
         <span data-en>${(item.description_en || []).join("<br>")}</span>
@@ -119,7 +119,6 @@ function renderCategory() {
 function initTabs() {
   const tabBtns  = document.querySelectorAll(".tab-btn");
   const tabViews = document.querySelectorAll(".tl-view");
-
   if (!tabBtns.length) return;
 
   tabBtns.forEach(btn => {
@@ -141,14 +140,9 @@ export function initExperience() {
   renderCategory();
   initTabs();
 
-  // 언어 전환 시 재렌더링
-  const langBtn = document.getElementById("lang-toggle");
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      setTimeout(() => {
-        renderTimeline();
-        renderCategory();
-      }, 10);
-    });
-  }
+  // 언어 전환 시 재렌더링을 main.js에 등록
+  registerExperienceRerender(() => {
+    renderTimeline();
+    renderCategory();
+  });
 }
