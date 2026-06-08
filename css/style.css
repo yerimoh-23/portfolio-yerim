@@ -562,7 +562,18 @@ img { display: block; max-width: 100%; }
 
 .tl-rows { display: flex; flex-direction: column; gap: 12px; }
 .tl-row { display: flex; gap: 16px; align-items: flex-start; }
-.tl-tag { flex-shrink: 0; margin-top: 2px; min-width: 60px; text-align: center; }
+.tl-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  min-width: 92px;
+  padding: 3px 10px;
+  font-size: var(--fs-xs);
+  line-height: 1.2;
+  box-sizing: border-box;
+  text-align: center;
+}
 .tl-body { font-size: var(--fs-small); color: var(--text); line-height: 1.6; flex: 1; }
 .tl-title { font-weight: 500; margin-bottom: 4px; }
 .tl-detail { font-size: var(--fs-xs); color: var(--text2); margin-top: 4px; line-height: 1.5; }
