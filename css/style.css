@@ -27,10 +27,10 @@
   --holo-2: rgba(87, 162, 202, 0.5);
   --holo-3: rgba(83, 138, 200, 0.45);
 
-  --tag-award-bg: #efd7d8; --tag-award: #702e30;
-  --tag-work-bg:  #f2e9d3; --tag-work:  #be8918;
-  --tag-act-bg:   #d8e2ce; --tag-act:   #4e6440;
-  --tag-proj-bg:  #dbd7f0; --tag-proj:  #3a2a8a;
+  --tag-award-bg: #f5dfe0; --tag-award: #702e30;
+  --tag-work-bg:  #f6efdd; --tag-work:  #be8918;
+  --tag-act-bg:   #ebf7e0; --tag-act:   #4e6440;
+  --tag-proj-bg:  #e5e1f7; --tag-proj:  #3a2a8a;
 
   --font-serif: "Playfair Display", "Georgia", serif;
   --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -510,7 +510,7 @@ img { display: block; max-width: 100%; }
 /* ── TAGS ── */
 .tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: var(--fs-xs);
   font-weight: 500;
   padding: 2px 7px;
   border-radius: 10px;
