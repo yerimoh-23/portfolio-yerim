@@ -566,8 +566,8 @@ img { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 92px;
-  min-width: 92px;
+  width: 80px;
+  min-width: 80px;
   padding: 3px 10px;
   font-size: var(--fs-xs);
   line-height: 1.2;
